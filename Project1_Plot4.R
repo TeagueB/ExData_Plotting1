@@ -1,4 +1,4 @@
-hpc_temp <- read.csv("C:/Users/bradley.b.teague/Documents/Data Science Courses/Exploratory Data Analysis/Project 1/exdata_data_household_power_consumption/household_power_consumption.txt", header = TRUE, sep = ";", na.strings = "?")
+hpc_temp <- read.csv("household_power_consumption.txt", header = TRUE, sep = ";", na.strings = "?")
 hpc_temp$DateTime <- strptime(paste(hpc_temp$Date,hpc_temp$Time), "%d/%m/%Y %H:%M:%S")
 hpc_temp$Date <- as.Date(hpc_temp$Date, "%d/%m/%Y")
 hpc <- subset(hpc_temp, hpc_temp$Date %in% c(as.Date("2007-02-01"), as.Date("2007-02-02")))
